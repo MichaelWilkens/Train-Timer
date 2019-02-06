@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <div class='container'>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Train Schedule</h1>
+                <p class="lead">Check out these trains!</p>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+          
+            </tbody>
+        </table>
+
+        <br><br><br>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Train Name</label>
+                <input type="text" class="form-control" id="train-name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Destination</label>
+                <input type="text" class="form-control" id='destination'>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Train Time (Military Time -- BE CAREFUL!)</label>
+                <input type="text" class="form-control" id="first-train-time" placeholder='HH:MM (military time)'>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Frequency (Minutes, Positive Whole Number )</label>
+                <input type="number" class="form-control" id='frequency'>
+            </div>    
+            <button type="submit" id='submit-button' class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src='assets/moment-js.js'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.js"
+    integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+    crossorigin="anonymous"></script>
+    <script src="assets/main.js"></script>
+</body>
+</html>
