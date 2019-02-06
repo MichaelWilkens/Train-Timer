@@ -81,16 +81,17 @@ $('#submit-button').on('click', function(){
         // document.documentElement.webkitRequestFullScreen();
         window.location.replace("http://geekprank.com/blue-death/");
     }
-
-    database.ref('trains/' + $('#train-name').val()).set({
-        trainName: $('#train-name').val(),
-        frequency: Math.abs(Math.floor($('#frequency').val())),
-        destination: $('#destination').val(),
-        firstTrainTime: firstTrain
-    });
-
+    if($('#train-name').val().trim() !== '' && $('#destination').val().trim() !== '' &&  $('#frequency').val().trim() !== ''){
+        database.ref('trains/' + $('#train-name').val()).set({
+            trainName: $('#train-name').val(),
+            frequency: Math.abs(Math.floor($('#frequency').val())),
+            destination: $('#destination').val(),
+            firstTrainTime: firstTrain
+        }); 
+    } else {
+        location.reload()
+    }
     
-
     //clear input fields
     $('#train-name').val("")
     $('#destination').val("")
